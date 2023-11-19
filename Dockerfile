@@ -1,7 +1,8 @@
 FROM openjdk:17-jdk
 
-COPY target/karriGo-demo.jar .
-
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "karriGo-demo.jar"]
+ADD target/karrigo-new-image.jar karrigo-new-image.jar
+
+
+ENTRYPOINT ["java", "-jar", "karrigo-new-image.jar"]

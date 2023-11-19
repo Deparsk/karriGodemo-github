@@ -74,7 +74,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>karriGo-demo</finalName>
+		<finalName>karrigo-new-image</finalName>
 	</build>
 
 </project>
