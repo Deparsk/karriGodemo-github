@@ -1,0 +1,36 @@
+server:
+  servlet:
+    context-path: /karriGo-demo
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql:///postgres
+    username: postgres
+    password: codingisfun
+
+#spring:
+#  datasource:
+#        url: jdbc:postgresql://34.121.42.106:5432/karrigo-db
+#        username: postgres
+#        password: codingisfun
+#        driver-class-name: org.postgresql.Driver
+
+
+
+
+
+  hikari:
+      data-source-properties:
+        socketFactory: com.google.cloud.sql.postgres.SocketFactory
+        cloudSqlInstance: karrigo-gcp:us-central1:karrigo-db
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+
+#  spring:
+#    jpa:
+#      show-sql=true:
